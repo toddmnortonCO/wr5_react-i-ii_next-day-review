@@ -11,10 +11,11 @@ export default class Header extends React.Component {
             name: ''
         }
     }
+    componentDidMount() {
+    }
 
     getUserName() {
         const name = window.prompt('What is your name?');
-
         this.setState({ name });
     }
 

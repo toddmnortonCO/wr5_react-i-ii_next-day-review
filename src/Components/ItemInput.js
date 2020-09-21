@@ -15,8 +15,26 @@ export default class ItemInput extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
+    componentDidMount() {
+        window.addEventListener('beforeunload', this.onUnload) 
+    }
+
+    componentWillUnmount() {
+        const { item } = this.state;
+
+        if (!item.trim()) {
+            window.removeEventListener('beforeunload', this.onUnload)
+        }
+    }
+
+    onUnload(e) {
+        e.preventDefault();
+        e.returnValue('');
+    }
+
     handleChange(e) {
         this.setState({ item: e.target.value })
+
     }
 
     handleSubmit(e) {

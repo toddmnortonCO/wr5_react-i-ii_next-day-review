@@ -21,13 +21,15 @@ export default class MyList extends React.Component {
         this.toggleShowInput = this.toggleShowInput.bind(this);
         this.addItem = this.addItem.bind(this);
     }
-    componentDidMount() {
-    }
 
     componentDidUpdate(prevProps, prevState) {
         if (prevState.items.length !== this.state.items.length) {
             this.showUpdatedMessage();
         }
+    }
+    
+    componentWillUnmount() {
+
     }
 
     showUpdatedMessage() {
