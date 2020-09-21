@@ -1,25 +1,17 @@
+/* 
+  -We have some basic styling set up in App.css.
+  -We'll bind methods for this demo (instead of using arrow functions) to learn more of when this is necessary.
+  -We need to bring in our necessary components for this component.
+*/
+
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* What what! */}
+    </>
   );
 }
 
